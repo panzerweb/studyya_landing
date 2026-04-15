@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import Hero_section from '@/components/home/Hero_section.vue'
-import Pricing_section from '@/components/home/Pricing_section.vue'
 import Resources_section from '@/components/home/Resources_section.vue'
 import Scheduler_Workspace from '@/components/home/Scheduler_Workspace.vue'
 </script>
@@ -15,7 +14,5 @@ import Scheduler_Workspace from '@/components/home/Scheduler_Workspace.vue'
   <div class="bg-gray-200 py-8 px-16">
     <Scheduler_Workspace></Scheduler_Workspace>
   </div>
-  <div class="bg-gray-200 py-8 px-16">
-    <Pricing_section></Pricing_section>
-  </div>
+  <div class="bg-gray-200 py-8 px-16"></div>
 </template>

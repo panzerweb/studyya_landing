@@ -53,11 +53,11 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
             >Home</RouterLink
           >
           <RouterLink
-            to="/about"
+            to="/contribute"
             v-bind:class="navLinkStyle"
             activeClass="text-sky-500"
             exactActiveClass="text-sky-500"
-            >About</RouterLink
+            >Contribute</RouterLink
           >
           <RouterLink
             to="/team"
@@ -119,16 +119,40 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
       <RouterLink to="/" class="text-center" v-bind:class="mobileNavLink" @click="toggleMenu"
         >Home</RouterLink
       >
-      <RouterLink to="/about" class="text-center" v-bind:class="mobileNavLink" @click="toggleMenu"
-        >About</RouterLink
+      <RouterLink
+        to="/contribute"
+        class="text-center"
+        v-bind:class="mobileNavLink"
+        @click="toggleMenu"
+        activeClass="text-sky-500"
+        exactActiveClass="text-sky-500"
+        >Contribute</RouterLink
       >
-      <RouterLink to="/team" class="text-center" v-bind:class="mobileNavLink" @click="toggleMenu"
+      <RouterLink
+        to="/team"
+        class="text-center"
+        v-bind:class="mobileNavLink"
+        @click="toggleMenu"
+        activeClass="text-sky-500"
+        exactActiveClass="text-sky-500"
         >Team</RouterLink
       >
-      <RouterLink to="/pricing" class="text-center" v-bind:class="mobileNavLink"
+      <RouterLink
+        to="/pricing"
+        class="text-center"
+        v-bind:class="mobileNavLink"
+        @click="toggleMenu"
+        activeClass="text-sky-500"
+        exactActiveClass="text-sky-500"
         >Pricing</RouterLink
       >
-      <RouterLink to="/contact" class="text-center" v-bind:class="mobileNavLink" @click="toggleMenu"
+      <RouterLink
+        to="/contact"
+        class="text-center"
+        v-bind:class="mobileNavLink"
+        @click="toggleMenu"
+        activeClass="text-sky-500"
+        exactActiveClass="text-sky-500"
         >Contact Us</RouterLink
       >
 

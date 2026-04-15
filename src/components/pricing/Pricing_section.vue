@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Pricing_card from './cards/Pricing_card.vue'
-import { type PricingProps } from './cards/Pricing_card.vue'
+import Pricing_card from '@/components/pricing/cards/Pricing_card.vue'
+import { type PricingProps } from '@/components/pricing/cards/Pricing_card.vue'
 
 const pricingPlans: PricingProps[] = [
   {
@@ -27,7 +27,7 @@ const pricingPlans: PricingProps[] = [
     id: 3,
     plan: 'Enterprise Tier',
     price: '1,200',
-    features: ['All features unlocked'],
+    features: ['Premium Features Unlocked', 'Educational Organization Account'],
     popular: false,
   },
 ]
