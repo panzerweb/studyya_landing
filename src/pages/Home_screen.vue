@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import Features_section from '@/components/home/Features_section.vue'
 import Hero_section from '@/components/home/Hero_section.vue'
+import Resources_section from '@/components/home/Resources_section.vue';
+import Scheduler_Workspace from '@/components/home/Scheduler_Workspace.vue';
 </script>
 
 <template>
@@ -8,6 +9,9 @@ import Hero_section from '@/components/home/Hero_section.vue'
     <Hero_section></Hero_section>
   </div>
   <div class="bg-gray-200 py-16 px-16">
-    <Features_section></Features_section>
+    <Resources_section></Resources_section>
+  </div>
+  <div class="bg-gray-200 py-16 px-16">
+    <Scheduler_Workspace></Scheduler_Workspace>
   </div>
 </template>

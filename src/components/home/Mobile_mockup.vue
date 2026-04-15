@@ -56,7 +56,7 @@ const getClasses = (index: number) => {
 
 const getHeadingClass = (index: number) => {
   const baseClasses =
-    'text-lg sm:text-xl md:text-2xl  text-gray-300 text-center font-bold leading-tight mb-4'
+    'text-xl sm:text-2xl md:text-4xl  text-gray-300 text-center font-bold leading-tight mb-4'
 
   if (index === 1) {
     return `${baseClasses}`
