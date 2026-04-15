@@ -50,7 +50,7 @@ const getClasses = (index: number) => {
     return `${baseClasses} w-65 h-130 sm:w-75 sm:h-160 shadow-2xl scale-100 opacity-100 z-10 mt-4`
   } else {
     // SIDES
-    return `${baseClasses} w-60 h-120 sm:w-72 sm:h-160 shadow-xl scale-90 opacity-70 translate-y-6 blur-[0.3px]`
+    return `${baseClasses} w-65 h-120 sm:w-72 sm:h-160 shadow-xl scale-90 opacity-70 translate-y-6 blur-[0.3px]`
   }
 }
 

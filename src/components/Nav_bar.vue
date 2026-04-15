@@ -2,6 +2,8 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import Get_app_button from './Get_app_button.vue'
 
+defineProps(['logo'])
+
 const scrolled = ref(false)
 
 const handleScroll = () => {
@@ -31,29 +33,59 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
   <nav
     :class="[
       'fixed w-full shadow-md transition-all duration-300 z-50',
-      scrolled ? 'bg-slate-900/95 backdrop-blur-md' : 'bg-transparent',
+      scrolled ? 'bg-slate-900/95 backdrop-blur-md' : 'bg-slate-900',
     ]"
   >
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <div class="flex items-center">
-          <span class="text-xl font-bold text-gray-100">LOGO</span>
+          <img :src="logo" alt="StudyYa Logo" class="w-14" />
         </div>
 
         <!-- Center Links (Desktop) -->
         <div class="hidden md:flex items-center space-x-8">
-          <RouterLink to="/" v-bind:class="navLinkStyle">Home</RouterLink>
-          <RouterLink to="/about" v-bind:class="navLinkStyle">About</RouterLink>
-          <RouterLink to="/team" v-bind:class="navLinkStyle">Team</RouterLink>
-          <RouterLink to="/pricing" v-bind:class="navLinkStyle">Pricing</RouterLink>
-          <RouterLink to="/contact" v-bind:class="navLinkStyle">Contact Us</RouterLink>
+          <RouterLink
+            to="/"
+            v-bind:class="navLinkStyle"
+            activeClass="text-sky-500"
+            exactActiveClass="text-sky-500"
+            >Home</RouterLink
+          >
+          <RouterLink
+            to="/about"
+            v-bind:class="navLinkStyle"
+            activeClass="text-sky-500"
+            exactActiveClass="text-sky-500"
+            >About</RouterLink
+          >
+          <RouterLink
+            to="/team"
+            v-bind:class="navLinkStyle"
+            activeClass="text-sky-500"
+            exactActiveClass="text-sky-500"
+            >Team</RouterLink
+          >
+          <RouterLink
+            to="/pricing"
+            v-bind:class="navLinkStyle"
+            activeClass="text-sky-500"
+            exactActiveClass="text-sky-500"
+            >Pricing</RouterLink
+          >
+          <RouterLink
+            to="/contact"
+            v-bind:class="navLinkStyle"
+            activeClass="text-sky-500"
+            exactActiveClass="text-sky-500"
+            >Contact Us</RouterLink
+          >
 
           <Get_app_button title="Get App"></Get_app_button>
         </div>
 
         <!-- Hamburger -->
-        <div class="md:hidden flex items-center">
+        <div class="md:hidden flex items-center text-gray-100">
           <button @click="toggleMenu">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,18 +115,26 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
     </div>
 
     <!-- Mobile Menu -->
-    <div v-if="isOpen" class="md:hidden px-4 pb-4 space-y-2">
-      <RouterLink to="/" v-bind:class="mobileNavLink" @click="toggleMenu">Home</RouterLink>
-      <RouterLink to="/about" v-bind:class="mobileNavLink" @click="toggleMenu">About</RouterLink>
-      <RouterLink to="/team" v-bind:class="mobileNavLink" @click="toggleMenu">Team</RouterLink>
-      <RouterLink to="/pricing" v-bind:class="mobileNavLink">Pricing</RouterLink>
-      <RouterLink to="/contact" v-bind:class="mobileNavLink" @click="toggleMenu"
+    <div v-if="isOpen" class="md:hidden px-4 pb-4 space-y-2 z-50">
+      <RouterLink to="/" class="text-center" v-bind:class="mobileNavLink" @click="toggleMenu"
+        >Home</RouterLink
+      >
+      <RouterLink to="/about" class="text-center" v-bind:class="mobileNavLink" @click="toggleMenu"
+        >About</RouterLink
+      >
+      <RouterLink to="/team" class="text-center" v-bind:class="mobileNavLink" @click="toggleMenu"
+        >Team</RouterLink
+      >
+      <RouterLink to="/pricing" class="text-center" v-bind:class="mobileNavLink"
+        >Pricing</RouterLink
+      >
+      <RouterLink to="/contact" class="text-center" v-bind:class="mobileNavLink" @click="toggleMenu"
         >Contact Us</RouterLink
       >
 
-      <button class="w-full bg-sky-600 text-white py-2 rounded-xl mt-2 cursor-pointer">
-        Get StudyYa free
-      </button>
+      <div class="flex justify-center">
+        <Get_app_button title="Get App"></Get_app_button>
+      </div>
     </div>
   </nav>
 </template>
