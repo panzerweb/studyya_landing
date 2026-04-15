@@ -18,7 +18,7 @@ import appStore from '@/assets/icons/appstore.png'
           </h1>
           <p class="text-gray-300 font-semibold text-base sm:text-lg md:text-xl leading-relaxed">
             Enhance your time management and productivity through curated resources, smart
-            scheduling, and gamified task management.
+            scheduling, and flexible workspace.
           </p>
         </div>
 
