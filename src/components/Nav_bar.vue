@@ -116,14 +116,11 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
 
     <!-- Mobile Menu -->
     <div v-if="isOpen" class="md:hidden px-4 pb-4 space-y-2 z-50">
-      <RouterLink to="/" class="text-center" v-bind:class="mobileNavLink" @click="toggleMenu"
-        >Home</RouterLink
-      >
+      <RouterLink to="/" class="text-center" v-bind:class="mobileNavLink">Home</RouterLink>
       <RouterLink
         to="/contribute"
         class="text-center"
         v-bind:class="mobileNavLink"
-        @click="toggleMenu"
         activeClass="text-sky-500"
         exactActiveClass="text-sky-500"
         >Contribute</RouterLink
@@ -132,7 +129,6 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
         to="/team"
         class="text-center"
         v-bind:class="mobileNavLink"
-        @click="toggleMenu"
         activeClass="text-sky-500"
         exactActiveClass="text-sky-500"
         >Team</RouterLink
@@ -141,7 +137,6 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
         to="/pricing"
         class="text-center"
         v-bind:class="mobileNavLink"
-        @click="toggleMenu"
         activeClass="text-sky-500"
         exactActiveClass="text-sky-500"
         >Pricing</RouterLink
@@ -150,7 +145,6 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
         to="/contact"
         class="text-center"
         v-bind:class="mobileNavLink"
-        @click="toggleMenu"
         activeClass="text-sky-500"
         exactActiveClass="text-sky-500"
         >Contact Us</RouterLink
