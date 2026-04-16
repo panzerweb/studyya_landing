@@ -4,9 +4,18 @@ export interface ChannelsProps {
   name: string
   desc: string
   buttonText: string
+  path: string
 }
 
+const emit = defineEmits<{
+  (e: 'navigate', path: string): void
+}>()
+
 const props = defineProps<ChannelsProps>()
+
+function handleClick(path: string): void {
+  emit('navigate', path)
+}
 </script>
 
 <template>
@@ -21,6 +30,7 @@ const props = defineProps<ChannelsProps>()
   <div class="my-4">
     <button
       class="px-6 py-4 bg-slate-800 text-sm text-gray-100 tracking-wider hover:bg-cyan-900 font-bold rounded-2xl cursor-pointer shadow-lg hover:-translate-y-1 transition-all duration-300"
+      @click="handleClick(props.path)"
     >
       {{ props.buttonText }}
     </button>

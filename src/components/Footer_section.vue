@@ -1,10 +1,14 @@
 <script setup lang="ts">
 defineProps(['logo'])
+
+// CONSTANT STYLES
+const navLinkStyle = 'text-gray-200 hover:text-sky-600 font-medium transition mb-4 block'
+// const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
 </script>
 
 <template>
   <footer class="bg-slate-900 text-gray-100">
-    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+    <div class="mx-auto w-full max-w-7xl p-4 py-6 lg:py-8">
       <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
           <a href="#" class="flex items-center">
@@ -18,18 +22,10 @@ defineProps(['logo'])
           <div>
             <h2 class="mb-6 text-sm font-semibold text-heading uppercase">Resources</h2>
             <ul class="text-body font-medium">
-              <li class="mb-4">
-                <a href="" class="hover:underline">About</a>
-              </li>
-              <li class="mb-4">
-                <a href="" class="hover:underline">Team</a>
-              </li>
-              <li class="mb-4">
-                <a href="" class="hover:underline">Pricing</a>
-              </li>
-              <li class="mb-4">
-                <a href="" class="hover:underline">Get The App</a>
-              </li>
+              <RouterLink to="/contribute" v-bind:class="navLinkStyle">Contribution</RouterLink>
+              <RouterLink to="/team" v-bind:class="navLinkStyle">Team</RouterLink>
+              <RouterLink to="/pricing" v-bind:class="navLinkStyle">Pricing</RouterLink>
+              <RouterLink to="/contact" v-bind:class="navLinkStyle">Contact</RouterLink>
             </ul>
           </div>
           <div>
@@ -63,24 +59,6 @@ defineProps(['logo'])
           Reserved.
         </span>
         <div class="flex mt-4 sm:justify-center sm:mt-0">
-          <a href="#" class="text-body hover:text-heading">
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M13.135 6H15V3h-1.865a4.147 4.147 0 0 0-4.142 4.142V9H7v3h2v9.938h3V12h2.021l.592-3H12V6.591A.6.6 0 0 1 12.592 6h.543Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            <span class="sr-only">Facebook page</span>
-          </a>
           <a href="#" class="text-body hover:text-heading ms-5">
             <svg
               class="w-5 h-5"
@@ -97,22 +75,7 @@ defineProps(['logo'])
             </svg>
             <span class="sr-only">Discord community</span>
           </a>
-          <a href="#" class="text-body hover:text-heading ms-5">
-            <svg
-              class="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z"
-              />
-            </svg>
-            <span class="sr-only">Twitter page</span>
-          </a>
+
           <a href="#" class="text-body hover:text-heading ms-5">
             <svg
               class="w-5 h-5"

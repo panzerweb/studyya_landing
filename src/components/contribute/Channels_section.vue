@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import router from '@/router'
 import Channels_card, { type ChannelsProps } from './cards/Channels_card.vue'
 
 const channels: ChannelsProps[] = [
@@ -7,15 +8,27 @@ const channels: ChannelsProps[] = [
     icon: 'forum',
     desc: 'Join discussions and ask questions',
     buttonText: 'Join Discord',
+    path: '/',
   },
-  // { name: 'Instagram', icon: 'photo_camera', desc: 'Follow updates and announcements' },
+  {
+    name: 'Github',
+    icon: 'rebase',
+    desc: 'Follow updates and announcements',
+    buttonText: 'Contribute to repository',
+    path: '/',
+  },
   {
     name: 'Email',
     icon: 'mail',
     desc: 'Reach out directly to the team',
     buttonText: 'Send us an Email',
+    path: '/contact',
   },
 ]
+
+async function navigateToPath(path: string) {
+  router.push(path)
+}
 </script>
 
 <template>
@@ -25,7 +38,7 @@ const channels: ChannelsProps[] = [
   <div class="my-4">
     <h1 class="text-2xl text-gray-300 text-center">Where can you contribute</h1>
   </div>
-  <div class="max-w-5xl mx-auto grid sm:grid-cols-2 gap-6 mt-16">
+  <div class="max-w-5xl mx-auto grid sm:grid-cols-3 gap-6 mt-16">
     <div
       v-for="(channel, i) in channels"
       :key="i"
@@ -36,6 +49,8 @@ const channels: ChannelsProps[] = [
         :name="channel.name"
         :desc="channel.desc"
         :button-text="channel.buttonText"
+        :path="channel.path"
+        v-on:navigate="navigateToPath"
       ></Channels_card>
     </div>
   </div>
