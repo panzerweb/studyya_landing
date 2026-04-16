@@ -12,7 +12,7 @@ import appStore from '@/assets/icons/appstore.png'
       <div class="max-w-5xl mx-auto text-center">
         <div class="heading-texts">
           <h1
-            class="text-gray-100 font-bold mt-6 mb-4 text-4xl sm:text-5xl md:text-6xl leading-tight"
+            class="text-gray-100 font-bold mt-6 mb-4 text-6xl sm:text-5xl md:text-6xl leading-tight"
           >
             Bring clarity into your student life
           </h1>
@@ -22,7 +22,7 @@ import appStore from '@/assets/icons/appstore.png'
           </p>
         </div>
 
-        <div class="button-group flex justify-center gap-4 mt-8 flex-wrap">
+        <div class="button-group flex justify-center gap-4 mt-12 flex-wrap">
           <Get_app_button title="Get StudyYa App" />
           <Outline_button title="Why StudyYa?" />
         </div>
