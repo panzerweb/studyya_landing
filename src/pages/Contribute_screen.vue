@@ -44,7 +44,7 @@ const activeSteps = computed(() => {
 
 const tabClass = (active: boolean) => {
   return active
-    ? 'px-6 py-2.5 bg-brand text-white shadow-md rounded-full transition-all duration-300 font-medium'
+    ? 'px-6 py-2.5 bg-slate-900 text-white shadow-md rounded-full transition-all duration-300 font-medium'
     : 'px-6 py-2.5 bg-gray-100 text-gray-600 hover:bg-gray-200 rounded-full transition-all duration-300 font-medium'
 }
 </script>
@@ -66,21 +66,21 @@ const tabClass = (active: boolean) => {
         <div class="flex flex-wrap justify-center gap-3 mb-10">
           <button
             @click="activeTab = 'dev'"
-            class="bg-slate-900 cursor-pointer"
+            class="cursor-pointer"
             :class="tabClass(activeTab === 'dev')"
           >
             Developers
           </button>
           <button
             @click="activeTab = 'design'"
-            class="bg-slate-900 cursor-pointer"
+            class="cursor-pointer"
             :class="tabClass(activeTab === 'design')"
           >
             Designers
           </button>
           <button
             @click="activeTab = 'content'"
-            class="bg-slate-900 cursor-pointer"
+            class="cursor-pointer"
             :class="tabClass(activeTab === 'content')"
           >
             Content Creators
