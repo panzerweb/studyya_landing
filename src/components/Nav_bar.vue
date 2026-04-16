@@ -32,7 +32,7 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
 <template>
   <nav
     :class="[
-      'fixed w-full shadow-md transition-all duration-300 z-50',
+      'fixed w-full shadow-md transition-all duration-300 z-50 py-4',
       scrolled ? 'bg-slate-900/95 backdrop-blur-md' : 'bg-slate-900',
     ]"
   >
@@ -40,7 +40,7 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
       <div class="flex justify-between items-center h-16">
         <!-- Logo -->
         <div class="flex items-center">
-          <img :src="logo" alt="StudyYa Logo" class="w-14" />
+          <img :src="logo" alt="StudyYa Logo" class="w-16" />
         </div>
 
         <!-- Center Links (Desktop) -->
@@ -116,10 +116,11 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
 
     <!-- Mobile Menu -->
     <div v-if="isOpen" class="md:hidden px-4 pb-4 space-y-2 z-50">
-      <RouterLink to="/" class="text-center" v-bind:class="mobileNavLink">Home</RouterLink>
+      <RouterLink to="/" class="text-center" v-bind:class="mobileNavLink" @click="toggleMenu">Home</RouterLink>
       <RouterLink
         to="/contribute"
         class="text-center"
+        @click="toggleMenu"
         v-bind:class="mobileNavLink"
         activeClass="text-sky-500"
         exactActiveClass="text-sky-500"
@@ -128,6 +129,7 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
       <RouterLink
         to="/team"
         class="text-center"
+        @click="toggleMenu"
         v-bind:class="mobileNavLink"
         activeClass="text-sky-500"
         exactActiveClass="text-sky-500"
@@ -136,6 +138,7 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
       <RouterLink
         to="/pricing"
         class="text-center"
+        @click="toggleMenu"
         v-bind:class="mobileNavLink"
         activeClass="text-sky-500"
         exactActiveClass="text-sky-500"
@@ -144,6 +147,7 @@ const mobileNavLink = 'block text-gray-200 hover:text-sky-600 py-2 font-medium'
       <RouterLink
         to="/contact"
         class="text-center"
+        @click="toggleMenu"
         v-bind:class="mobileNavLink"
         activeClass="text-sky-500"
         exactActiveClass="text-sky-500"

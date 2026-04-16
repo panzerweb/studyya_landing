@@ -42,6 +42,9 @@ const router = createRouter({
       component: Get_App,
     },
   ],
+  scrollBehavior(to, from, savedLocation){
+    return { top: 0 }
+  }
 })
 
 export default router
