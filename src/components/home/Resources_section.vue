@@ -46,7 +46,7 @@ async function selectOption(id: number) {
 
 <template>
   <div class="mb-4">
-    <h1 class="text-6xl font-bold">Learn the best way</h1>
+    <h1 class="text-4xl md:text-6xl font-bold">Learn the best way</h1>
   </div>
   <div class="flex flex-col md:flex-row justify-between items-start">
     <div>

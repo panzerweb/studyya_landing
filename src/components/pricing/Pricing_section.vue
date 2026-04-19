@@ -23,13 +23,13 @@ const pricingPlans: PricingProps[] = [
     ],
     popular: true,
   },
-  {
-    id: 3,
-    plan: 'Enterprise Tier',
-    price: '1,200',
-    features: ['Premium Features Unlocked', 'Educational Organization Account'],
-    popular: false,
-  },
+  // {
+  //   id: 3,
+  //   plan: 'Enterprise Tier',
+  //   price: '1,200',
+  //   features: ['Premium Features Unlocked', 'Educational Organization Account'],
+  //   popular: false,
+  // },
 ]
 </script>
 
@@ -43,7 +43,7 @@ const pricingPlans: PricingProps[] = [
       </p>
 
       <!-- Cards -->
-      <div class="grid gap-8 md:grid-cols-3">
+      <div class="grid gap-8 md:grid-cols-2">
         <Pricing_card
           v-for="pricing_plan in pricingPlans"
           :key="pricing_plan.id"

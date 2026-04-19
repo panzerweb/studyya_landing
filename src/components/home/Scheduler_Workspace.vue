@@ -22,7 +22,7 @@ const toggleTask = (id: number) => {
     <div class="flex flex-col gap-6">
       <!-- Header -->
       <div class="flex justify-between items-center">
-        <h1 class="text-6xl font-bold text-gray-900">Efficient Workspace</h1>
+        <h1 class="text-4xl md:text-6xl font-bold text-gray-900">Efficient Workspace</h1>
       </div>
 
       <!-- Main Goal Card -->
@@ -137,7 +137,7 @@ const toggleTask = (id: number) => {
 
     <!-- Smart Scheduler -->
     <div class="flex flex-col gap-6">
-      <h1 class="text-6xl font-bold text-gray-900">Smart Scheduler</h1>
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-900">Smart Scheduler</h1>
 
       <!-- Main Container Card -->
       <div
@@ -151,7 +151,7 @@ const toggleTask = (id: number) => {
           </div>
 
           <!-- Calendar Cells -->
-          <div class="flex justify-between">
+          <div class="flex justify-between flex-wrap my-auto">
             <div
               v-for="day in days"
               :key="day"
