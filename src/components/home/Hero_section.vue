@@ -24,7 +24,7 @@ import appStore from '@/assets/icons/appstore.png'
 
         <div class="button-group flex justify-center gap-4 mt-12 flex-wrap">
           <Get_app_button title="Get StudyYa App" />
-          <Outline_button title="Why StudyYa?" />
+          <!-- <Outline_button title="Why StudyYa?" /> -->
         </div>
       </div>
 
