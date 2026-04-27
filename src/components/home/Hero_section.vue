@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import Get_app_button from '../Get_app_button.vue'
-import Outline_button from '../Outline_button.vue'
 import Mobile_mockup from './Mobile_mockup.vue'
 import googlePlayStore from '@/assets/icons/playstore.png'
 import appStore from '@/assets/icons/appstore.png'
